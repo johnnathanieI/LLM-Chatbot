@@ -1,3 +1,5 @@
+// Need to make it so that onClick highlights the card persistently.
+// Once chat cards are implemented, this will navigate to the specific chat.
 function Card(props) {
   const { children } = props;
 
