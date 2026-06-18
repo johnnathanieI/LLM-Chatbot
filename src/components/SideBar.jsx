@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import SBButton from "./SBButton.jsx";
+import ModalButton from "./ModalButton.jsx";
+import Card from "./Card.jsx";
+import { useState } from "react";
 
 function SideBar() {
-  const [activeButton, setActiveButton] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [activeButton, setActiveButton] = useState(null); // For modals and other buttons that don't have a route change
 
   return (
     <div className="flex flex-col overflow-hidden h-full min-h-0 w-[260px] p-1 border-neutral-800 border-r">
@@ -13,32 +18,59 @@ function SideBar() {
           {/* New chat and Search chat parallax */}
           <div className="flex flex-col">
             <SBButton
-              active={activeButton === "new-chat"}
-              onClick={() => setActiveButton("new-chat")}
+              active={
+                location.pathname === "/" ||
+                location.pathname === "/new-chat" ||
+                activeButton === "new-chat"
+              }
+              onClick={() => {
+                navigate("/");
+                setActiveButton("new-chat");
+              }}
             >
               New Chat
             </SBButton>
-            <SBButton
+            <ModalButton
               active={activeButton === "search-chat"}
-              onClick={() => setActiveButton("search-chat")}
+              // onClick={() => {
+              //   setActiveButton(
+              //     activeButton === "search-chat" ? null : "search-chat",
+              //   );
+              // }}
             >
               Search Chat
-            </SBButton>
+            </ModalButton>
           </div>
         </div>
         <SBButton
-          active={activeButton === "library"}
-          onClick={() => setActiveButton("library")}
+          active={
+            location.pathname === "/library" || activeButton === "library"
+          }
+          onClick={() => {
+            navigate("/library");
+            setActiveButton("library");
+          }}
         >
           Library
         </SBButton>
         <SBButton
-          active={activeButton === "projects"}
-          onClick={() => setActiveButton("projects")}
+          active={
+            location.pathname === "/projects" || activeButton === "projects"
+          }
+          onClick={() => {
+            navigate("/projects");
+            setActiveButton("projects");
+          }}
         >
           Projects
         </SBButton>
-        <div className="flex-1">Recent</div>
+        <div className="flex">Recent</div>
+        <Card
+          active={location.pathname === "/wad"} //UID pathname for when new chat cards are implemented
+          onClick={() => console.log("Card clicked!")} // Will eventually navigate to the specific chat when implemented
+        >
+          Card 1
+        </Card>
       </div>
       <div className="shrink-0 bg-black">Profile</div>
     </div>

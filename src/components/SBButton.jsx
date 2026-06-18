@@ -12,8 +12,8 @@ function SBButton(props) {
   const { children, active, onClick } = props;
 
   const buttonState = active
-    ? "bg-neutral-800"
-    : "bg-black md:hover:bg-neutral-900";
+    ? "bg-neutral-900"
+    : "bg-black hover:bg-neutral-900 active:bg-neutral-800";
 
   return (
     <div
