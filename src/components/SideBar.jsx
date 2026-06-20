@@ -18,11 +18,7 @@ function SideBar() {
           {/* New chat and Search chat parallax */}
           <div className="flex flex-col">
             <SBButton
-              active={
-                location.pathname === "/" ||
-                location.pathname === "/new-chat" ||
-                activeButton === "new-chat"
-              }
+              active={location.pathname === "/" || activeButton === "new-chat"}
               onClick={() => {
                 navigate("/");
                 setActiveButton("new-chat");
