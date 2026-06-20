@@ -16,7 +16,7 @@ export default function NewChat() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-plus-icon lucide-plus"
+              className="lucide lucide-plus-icon lucide-plus"
             >
               <path d="M5 12h14" />
               <path d="M12 5v14" />
@@ -40,7 +40,7 @@ export default function NewChat() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-arrow-up-icon lucide-arrow-up"
+              className="lucide lucide-arrow-up-icon lucide-arrow-up"
             >
               <path d="m5 12 7-7 7 7" />
               <path d="M12 19V5" />
