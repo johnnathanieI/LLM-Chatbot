@@ -22,7 +22,10 @@ export default function NewChat() {
               <path d="M12 5v14" />
             </svg>
           </button>
-          <form autocomplete="off" className="flex flex-1 overflow-x-auto mr-2">
+          <form
+            autocomplete="off"
+            className="flex flex-1 overflow-x-auto mr-2 ml-2 text-sm"
+          >
             <input
               type="text"
               className="bg-transparent outline-none"
