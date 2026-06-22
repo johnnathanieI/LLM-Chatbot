@@ -3,6 +3,14 @@ import SBButton from "./SBButton.jsx";
 import ModalButton from "./ModalButton.jsx";
 import Card from "./Card.jsx";
 import { useState } from "react";
+import {
+  ChatIcon,
+  LibraryIcon,
+  ProjectsIcon,
+  SearchIcon,
+} from "../assets/icons.jsx";
+
+//function MinimizeSideBar() {}
 
 function SideBar() {
   const navigate = useNavigate();
@@ -10,11 +18,11 @@ function SideBar() {
   const [activeButton, setActiveButton] = useState(null); // For modals and other buttons that don't have a route change
 
   return (
-    <div className="flex flex-col overflow-hidden h-full min-h-0 w-[260px] p-1 border-neutral-800 border-r">
+    <div className="flex flex-col overflow-hidden h-full min-h-0 w-[260px] p-2 border-neutral-800 border-r">
       <div className="flex flex-col overflow-y-auto min-h-0 h-full flex-1 text-[14px]">
         {/* Home button and sidebar collapse button div One */}
         <div className="flex flex-col sticky top-0 z-10 bg-black">
-          <div className="flex">test</div>
+          <div className="flex justify-left w-full">test</div>
           {/* New chat and Search chat parallax */}
           <div className="flex flex-col">
             <SBButton
@@ -23,6 +31,7 @@ function SideBar() {
                 navigate("/");
                 setActiveButton("new-chat");
               }}
+              icon={<ChatIcon />}
             >
               New Chat
             </SBButton>
@@ -33,6 +42,7 @@ function SideBar() {
               //     activeButton === "search-chat" ? null : "search-chat",
               //   );
               // }}
+              icon={<SearchIcon />}
             >
               Search Chat
             </ModalButton>
@@ -46,6 +56,7 @@ function SideBar() {
             navigate("/library");
             setActiveButton("library");
           }}
+          icon={<LibraryIcon />}
         >
           Library
         </SBButton>
@@ -57,6 +68,7 @@ function SideBar() {
             navigate("/projects");
             setActiveButton("projects");
           }}
+          icon={<ProjectsIcon />}
         >
           Projects
         </SBButton>

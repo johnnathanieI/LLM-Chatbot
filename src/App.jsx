@@ -4,6 +4,7 @@ import SideBar from "./components/SideBar.jsx";
 import NewChat from "./pages/NewChat.jsx";
 import Library from "./pages/Library.jsx";
 import Projects from "./pages/Projects.jsx";
+//import Chat from "./pages/Chat.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <div className="flex bg-white w-full min-h-0 justify-items-between h-fit p-2"></div>
               <Routes>
                 <Route path="/" element={<NewChat />} />
+                {/* <Route path="/chat/:chatId" element={<Chat />} /> */}
                 <Route path="/library" element={<Library />} />
                 <Route path="/projects" element={<Projects />} />
               </Routes>

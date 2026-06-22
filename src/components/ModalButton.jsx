@@ -1,5 +1,5 @@
 function ModalButton(props) {
-  const { children, active, onClick } = props;
+  const { children, active, onClick, icon } = props;
 
   const buttonState = active
     ? "bg-neutral-900"
@@ -13,11 +13,7 @@ function ModalButton(props) {
           buttonState
         }
       >
-        <img
-          className="w-4 h-4 mr-2"
-          src="..\assets\react.svg"
-          alt="button icon"
-        />
+        <div className="mr-2">{icon}</div>
         <button className="w-full text-left cursor-pointer" onClick={onClick}>
           {children}
         </button>
