@@ -11,3 +11,20 @@ __pycache__/
 
 # IDE files
 .vscode/
+.idea/
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Database files (if using SQLite)
+*.db
+*.sqlite
+*.sqlite3
+
+# Type checking cache
+.mypy_cache/
+
+# Application logs
+*.log
