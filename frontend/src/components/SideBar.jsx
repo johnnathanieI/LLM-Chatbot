@@ -15,7 +15,7 @@ import {
 function SideBar() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [activeButton, setActiveButton] = useState(null); // For modals and other buttons that don't have a route change
+  const [activeButton, setActiveButton] = useState("new-chat"); // For modals and other buttons that don't have a route change
 
   return (
     <div className="flex flex-col overflow-hidden h-full min-h-0 w-[260px] p-2 border-neutral-800 border-r">
