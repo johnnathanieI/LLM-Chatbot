@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+.message {
+  @apply w-fit text-sm;
+}
+
+/* Has a bunch of buttons for ai maybe making a two div flex-col-box */
+.message.ai {
+  @apply text-white;
+}
+
+.message.user {
+  @apply bg-neutral-700 rounded-full p-2 pl-4 pr-4;
+}
+
 /* .counter {
   font-size: 16px;
   padding: 5px 10px;

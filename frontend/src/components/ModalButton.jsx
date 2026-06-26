@@ -9,7 +9,7 @@ function ModalButton(props) {
     <>
       <div
         className={
-          "flex items-center w-full h-fit pl-2 pr-2 pt-1 pb-1 rounded-lg" +
+          "flex items-center w-full h-fit pl-2 pr-2 pt-1 pb-1 rounded-lg " +
           buttonState
         }
       >

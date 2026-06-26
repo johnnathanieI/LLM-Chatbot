@@ -4,7 +4,7 @@ import SideBar from "./components/SideBar.jsx";
 import NewChat from "./pages/NewChat.jsx";
 import Library from "./pages/Library.jsx";
 import Projects from "./pages/Projects.jsx";
-//import Chat from "./pages/Chat.jsx";
+import Chat from "./pages/Chat.jsx";
 
 function App() {
   return (
@@ -13,12 +13,13 @@ function App() {
         <div className="relative z-0 flex min-h-0 w-full flex-1">
           <SideBar />
           <div className="relative flex min-h-0 w-full flex-1 @container/main">
+            {/** Apparently, the top bar is a flex-row */}
             <div className="relative flex flex-col w-full flex-1 overflow-y-auto">
               {/* Top bar */}
-              <div className="flex bg-white w-full min-h-0 justify-items-between h-fit p-2"></div>
+              <header className="flex sticky top-0 z-0 bg-white w-full min-h-0 justify-items-between h-fit p-2"></header>
               <Routes>
                 <Route path="/" element={<NewChat />} />
-                {/* <Route path="/chat/:chatId" element={<Chat />} /> */}
+                <Route path="/c/:chatid" element={<Chat />} />
                 <Route path="/library" element={<Library />} />
                 <Route path="/projects" element={<Projects />} />
               </Routes>

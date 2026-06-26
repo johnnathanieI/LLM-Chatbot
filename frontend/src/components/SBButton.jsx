@@ -17,7 +17,10 @@ function SBButton(props) {
 
   return (
     <div
-      className={`flex items-center w-full h-fit pl-2 pr-2 pt-1 pb-1 rounded-lg ${buttonState}`}
+      className={
+        "flex items-center w-full h-fit pl-2 pr-2 pt-1 pb-1 rounded-lg " +
+        buttonState
+      }
     >
       <div className="mr-2">{icon}</div>
       <button className="w-full text-left cursor-pointer" onClick={onClick}>

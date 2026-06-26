@@ -72,7 +72,9 @@ function SideBar() {
         >
           Projects
         </SBButton>
-        <div className="flex">Recent</div>
+        <div className="flex mt-4 font-semibold w-full cursor-pointer">
+          Recents
+        </div>
         <Card
           active={location.pathname === "/wad"} //UID pathname for when new chat cards are implemented
           onClick={() => console.log("Card clicked!")} // Will eventually navigate to the specific chat when implemented
