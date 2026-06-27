@@ -32,6 +32,10 @@ dist-ssr
 /backend/__pycache__/
 /backend/*.pyc
 
+# Environment files
+/backend/.env
+/backend/.env.*
+
 # Ollama local files
 /ollama/.ollama
 /ollama/*.db

@@ -19,6 +19,7 @@ function App() {
               <header className="flex sticky top-0 z-0 bg-white w-full min-h-0 justify-items-between h-fit p-2"></header>
               <Routes>
                 <Route path="/" element={<NewChat />} />
+                <Route path="/c" element={<NewChat />} />
                 <Route path="/c/:chatid" element={<Chat />} />
                 <Route path="/library" element={<Library />} />
                 <Route path="/projects" element={<Projects />} />
